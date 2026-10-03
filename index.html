@@ -1199,9 +1199,16 @@ td.num, th.num { text-align: right; padding-right: 16px; }
 .shm-side .vseg button[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); }
 .shm-note { font-size: 12.5px; min-height: 18px; color: var(--muted); }
 .shm-x { margin-top: auto; }
-@media (max-width: 760px) { .shm-box { grid-template-columns: minmax(0, 1fr); } .shm-img img { max-height: 46vh; } }
+@media (max-width: 760px) {
+  .shm-box { grid-template-columns: minmax(0, 1fr); position: relative; padding-top: 58px; }
+  .shm-img img { max-height: 46vh; }
+  .shm-side button.shm-x { position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; padding: 0; margin: 0; border-radius: 50%; font-size: 0; line-height: 0; color: transparent; text-align: center; display: grid; place-items: center; z-index: 2; }
+  .shm-side button.shm-x::before, .shm-side button.shm-x::after { content: ""; grid-area: 1 / 1; width: 16px; height: 2px; border-radius: 2px; background: var(--ink); transform: rotate(45deg); }
+  .shm-side button.shm-x::after { transform: rotate(-45deg); }
+}
 .rcol { min-width: 0; display: flex; flex-direction: column; gap: 12px; }
 .side .tkc { margin: 16px 0 0; }
+.tkc.top { margin: 0 0 16px; }
 .vbar { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 10px; }
 .vseg { display: inline-flex; padding: 3px; gap: 2px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
 .vseg button { appearance: none; border: 0; background: none; color: var(--muted); font: 500 13px var(--font-body); padding: 7px 14px; border-radius: 7px; cursor: pointer; transition: background .15s, color .15s; }
@@ -1503,7 +1510,7 @@ td.num, th.num { text-align: right; padding-right: 16px; }
       <textarea id="shm-cap" readonly spellcheck="false" aria-label="Suggested caption"></textarea>
       <button type="button" id="shm-capbtn">Copy caption</button>
       <div class="shm-note" id="shm-note" role="status"></div>
-      <button type="button" class="shm-x" id="shm-close">Close</button>
+      <button type="button" class="shm-x" id="shm-close" aria-label="Close">Close</button>
     </div>
   </div>
 </div>
@@ -2339,7 +2346,7 @@ td.num, th.num { text-align: right; padding-right: 16px; }
     st.classList.add("tk-6"); applyCustomVars(st, S); MO = S.motion;
     mountToken(); window.__sundialShowFinal(); playToken();
     var extra = S.warn.concat(S.notes);
-    setCustomMsg("ok", "<b>" + esc(S.name) + "</b> applied." + (extra.length ? " " + extra.length + " adjustment" + (extra.length > 1 ? "s" : "") + ": " + esc(extra.join("; ")) + "." : ""));
+    setCustomMsg("", "");
     return true;
   }
   var customInit = false;
@@ -2760,6 +2767,17 @@ td.num, th.num { text-align: right; padding-right: 16px; }
       return d.save({ filename: name, data: shBlob }).then(function () { shNote("Saved."); }, function (e) { if (e && e.code === "declined") return; shNote("Could not save here. Right click or long press the image instead."); });
     }, function () { shNote("Right click or long press the image to save it."); });
   });
+
+  (function () {
+    var box = q("#tk-custom"), side = q("#side"), lay = side && side.parentNode, mq = window.matchMedia("(max-width: 900px)");
+    if (!box || !side || !lay) return;
+    function place() {
+      if (mq.matches) { if (box.parentNode !== lay.parentNode) { box.classList.add("top"); lay.parentNode.insertBefore(box, lay); } }
+      else if (box.parentNode !== side) { box.classList.remove("top"); side.appendChild(box); }
+    }
+    place();
+    if (mq.addEventListener) mq.addEventListener("change", place); else if (mq.addListener) mq.addListener(place);
+  })();
   initCustomPanel();
 })();
 </script>
