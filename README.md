@@ -4,6 +4,7 @@
 
 [![Live demo](https://img.shields.io/badge/Live%20demo-open%20the%20generator-2C46E6?style=for-the-badge)](https://seinhb.github.io/Design-Token-Generator/)
 [![Read the article](https://img.shields.io/badge/LinkedIn-read%20the%20article-0A66C2?style=for-the-badge)](ARTICLE_URL)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
 ![One wireframe, four different looks, restyled only by a design token](assets/four-looks.gif)
 
@@ -121,6 +122,10 @@ This idea is not new, and other people are working on it from different directio
 - [Building an Agentic Design System](https://josefrichter.design/blog/agentic-design-system) (Josef Richter)
 
 The article linked above goes into these and the limits of this experiment in more detail.
+
+## License
+
+Released under the [MIT License](LICENSE). You are free to use, copy, modify and share the code, as long as the copyright notice stays with it. The fonts are loaded from Google Fonts and keep their own licenses.
 
 ## Feedback
 
