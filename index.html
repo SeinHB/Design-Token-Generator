@@ -12,6 +12,21 @@ img{max-width:100%}
 </style>
 <title>Sein.Drei Design Token Generator</title>
 <meta name="description" content="Paste a design token JSON and watch the wireframe become a styled dashboard. Export a share image for social media.">
+<link rel="canonical" href="https://seinhb.github.io/Design-Token-Generator/">
+<meta name="theme-color" content="#0A0A0A">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sein.Drei Design Token Generator">
+<meta property="og:title" content="Design Token Generator: turn a wireframe into a finished UI">
+<meta property="og:description" content="Paste a design token and watch a plain wireframe become a styled dashboard. An experiment by Sein Badri.">
+<meta property="og:url" content="https://seinhb.github.io/Design-Token-Generator/">
+<meta property="og:image" content="https://seinhb.github.io/Design-Token-Generator/assets/preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A plain wireframe dashboard restyled into a finished design by one design token">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Design Token Generator: turn a wireframe into a finished UI">
+<meta name="twitter:description" content="Paste a design token and watch a plain wireframe become a styled dashboard.">
+<meta name="twitter:image" content="https://seinhb.github.io/Design-Token-Generator/assets/preview.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -2366,7 +2381,7 @@ td.num, th.num { text-align: right; padding-right: 16px; }
     if (saved) { inp.value = saved; }
   }
   /* ===== Share poster: draws the final design onto a canvas ===== */
-  var CREDIT = { name: "Sein", line: "hosein.badri98@gmail.com", tag: "", label: "Sein.Drei Design Token Generator", product: "Sein.Drei Design Token Generator", linkedin: "https://www.linkedin.com/in/sein-badri/", byline: "Design generator by" };
+  var CREDIT = { name: "Sein", line: "linkedin.com/in/sein-badri", tag: "", label: "Sein.Drei Design Token Generator", product: "Sein.Drei Design Token Generator", linkedin: "https://www.linkedin.com/in/sein-badri/", byline: "Design generator by" };
   function hexA(h, a) { var c = rgbOf(h); return "rgba(" + c[0] + "," + c[1] + "," + c[2] + "," + a + ")"; }
   function rrPath(c, x, y, w, h, r) { r = Math.max(0, Math.min(r, w / 2, h / 2)); c.beginPath(); c.moveTo(x + r, y); c.arcTo(x + w, y, x + w, y + h, r); c.arcTo(x + w, y + h, x, y + h, r); c.arcTo(x, y + h, x, y, r); c.arcTo(x, y, x + w, y, r); c.closePath(); }
   function linGrad(c, x, y, w, h, deg, c1, c2) {
