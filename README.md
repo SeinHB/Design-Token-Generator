@@ -3,7 +3,7 @@
 **Paste a design token. Watch a plain wireframe become a finished UI.**
 
 [![Live demo](https://img.shields.io/badge/Live%20demo-open%20the%20generator-2C46E6?style=for-the-badge)](https://seinhb.github.io/Design-Token-Generator/)
-[![Read the article](https://img.shields.io/badge/LinkedIn-read%20the%20article-0A66C2?style=for-the-badge)](ARTICLE_URL)
+[![Read the article](https://img.shields.io/badge/LinkedIn-read%20the%20article-0A66C2?style=for-the-badge)](https://www.linkedin.com/pulse/design-tokens-team-map-experiment-wireframes-style-themselves-badri-vxz8f/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
 ![One wireframe, four different looks, restyled only by a design token](assets/four-looks.gif)
@@ -132,4 +132,4 @@ Released under the [MIT License](LICENSE). You are free to use, copy, modify and
 If you try the generator, I would like to hear what worked, what broke, and what you would add. Leave a comment on my LinkedIn post or send me a message.
 
 **Sein Badri**, UI/UX and design systems designer
-[LinkedIn](https://www.linkedin.com/in/sein-badri/) · [Article](ARTICLE_URL) · [Live demo](https://seinhb.github.io/Design-Token-Generator/)
+[LinkedIn](https://www.linkedin.com/in/sein-badri/) · [Article](https://www.linkedin.com/pulse/design-tokens-team-map-experiment-wireframes-style-themselves-badri-vxz8f/) · [Live demo](https://seinhb.github.io/Design-Token-Generator/)
